@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-react: #58c4dc;
+  --color-node: #3f873f;
+  --color-tailwind: #00bcff;
+  --color-express: #bbbbbb;
+  --color-chakra: #0d867b;
+  --color-mongo: #13aa52;
+  --color-firebase: #ffa100;
+
+  --font-primary: "Space Mono", sans-serif;
+  --font-secondary: "Archivo Black", sans-serif;
+  --font-tertiary: "Poiret One", sans-serif;
+  --font-blog: "Roboto", sans-serif;
+  --font-weight-custombold: 900;
+}

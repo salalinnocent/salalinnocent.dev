@@ -1,0 +1,87 @@
+import { useEffect, useRef, useState } from "react";
+import loadPosts from "../utils/loadPosts";
+import ReactMarkdown from "react-markdown";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+//Blogs.jsx
+const Blogs = () => {
+    const [blogs, setBlogs] = useState([]);
+    const [activeBlog, setActiveBlog] = useState(null);
+    const blogRef = useRef(null);
+
+    useEffect(() => {
+        const handleClickOutside = (e) => {
+            if (blogRef.current && !blogRef.current.contains(e.target))
+                setActiveBlog(null)
+        }
+        if (activeBlog) {
+            document.addEventListener("mousedown", handleClickOutside)
+        }
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside)
+        }
+    }, [activeBlog])
+
+    useEffect(() => {
+        loadPosts().then(setBlogs);
+    }, []);
+
+    return (
+        <section id="blogs" className="max-container bg-black mt-[100px] text-white">
+            <div className="flex flex-col items-center justify-center gap-5">
+                <h1 className="font-tertiary text-5xl border-b-4 border-red-700 pb-2">Blogs</h1>
+                <ul className="w-full max-w-2xl divide-y divide-red-900">
+                    {blogs.map((blog) => (
+                        <li
+                            key={blog.slug}
+                            className="cursor-pointer py-4 hover:bg-gray-800 transition-all px-4 rounded"
+                            onClick={() => setActiveBlog(blog)}
+                        >
+                            <div className="flex flex-row gap-3">
+                                <img src={blog.icon} className="h-15 w-15 bg-gray-600 rounded-lg" />
+                                <div className="flex flex-col mt-1">
+                                    <h2 className="text-xl font-semibold font-blog">{blog.title}</h2>
+                                    <p className="text-sm text-gray-400">{blog.date}</p>
+                                </div>
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
+            {/* Modal for Blog Preview */}
+            {activeBlog && (
+                <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+                    <div className="bg-white text-black max-w-6xl p-6 rounded-lg shadow-lg overflow-y-auto max-h-[90vh]"
+                        ref={blogRef}>
+                        <button className="mb-4 text-red-600 font-bold" onClick={() => setActiveBlog(null)}>
+                            Close
+                        </button>
+                        <h2 className="text-3xl font-bold mb-2">{activeBlog.title}</h2>
+                        <p className="text-sm text-gray-600 mt-2">{activeBlog.date}</p>
+                        <div className=" font-blog text-black text-xl space-y-3 mt-6 items-center justify-center">
+                            <ReactMarkdown
+                                components={{
+                                    code({ node, inline, className, children, ...props }) {
+                                        const match = /language-(\w+)/.exec(className || '')
+                                        return !inline && match ? (
+                                            <SyntaxHighlighter style={oneDark} language={match[1]} PreTag="div" {...props}>
+                                                {String(children).replace(/\n$/, '')}
+                                            </SyntaxHighlighter>
+                                        ) : (
+                                            <code className={className} {...props}>
+                                                {children}
+                                            </code>
+                                        )
+                                    }
+                                }}
+                            >{activeBlog.body}</ReactMarkdown>
+                        </div>
+                    </div>
+                </div>
+            )}
+        </section>
+    );
+};
+
+export default Blogs;
