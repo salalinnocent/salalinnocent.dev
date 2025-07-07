@@ -5,7 +5,7 @@ import chakraIcon from "../assets/chakraui.svg";
 import expressIcon from "../assets/express.svg";
 import mongodbIcon from "../assets/mongodb.svg";
 import firebaseIcon from "../assets/firebase.svg";
-import darhi1 from "../assets/darhi1.png";
+import darhi2 from "../assets/darhi2.png";
 import nike1 from "../assets/nike1.png";
 import nike2 from "../assets/nike2.png";
 import nike3 from "../assets/nike3.png";
@@ -99,7 +99,7 @@ export const projects = [
   {
     name: "Darhi Moonch",
     techStack: ["React.js", "Tailwind CSS"],
-    images: [darhi1],
+    images: [darhi2],
   },
   {
     name: "Nike Landing Page",
