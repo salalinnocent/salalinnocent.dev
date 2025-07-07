@@ -5,7 +5,7 @@ import chakraIcon from "../assets/chakraui.svg";
 import expressIcon from "../assets/express.svg";
 import mongodbIcon from "../assets/mongodb.svg";
 import firebaseIcon from "../assets/firebase.svg";
-import darhi1 from "../assets/darhi1.png";
+import darhi1 from "../assets/darhi1.PNG";
 import nike1 from "../assets/nike1.png";
 import nike2 from "../assets/nike2.png";
 import nike3 from "../assets/nike3.png";
