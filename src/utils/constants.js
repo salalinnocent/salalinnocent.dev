@@ -6,20 +6,20 @@ import expressIcon from "../assets/express.svg";
 import mongodbIcon from "../assets/mongodb.svg";
 import firebaseIcon from "../assets/firebase.svg";
 import darhi1 from "../assets/darhi1.PNG";
-import nike1 from "../assets/Nike1.PNG";
-import nike2 from "../assets/Nike2.PNG";
-import nike3 from "../assets/Nike3.PNG";
-import nike4 from "../assets/Nike4.PNG";
-import insta1 from "../assets/insta1.PNG";
-import insta2 from "../assets/insta2.PNG";
-import insta3 from "../assets/insta3.PNG";
-import kobweb1 from "../assets/kobweb1.PNG";
-import kobweb2 from "../assets/kobweb2.PNG";
-import kobweb4 from "../assets/kobweb4.PNG";
-import kobweb5 from "../assets/kobweb5.PNG";
-import Graphbook1 from "../assets/Graphbook1.PNG";
-import Graphbook2 from "../assets/Graphbook2.PNG";
-import Graphbook3 from "../assets/Graphbook3.PNG";
+import nike1 from "../assets/nike1.png";
+import nike2 from "../assets/nike2.png";
+import nike3 from "../assets/nike3.png";
+import nike4 from "../assets/nike4.png";
+import insta1 from "../assets/insta1.png";
+import insta2 from "../assets/insta2.png";
+import insta3 from "../assets/insta3.png";
+import kobweb1 from "../assets/kobweb1.png";
+import kobweb2 from "../assets/kobweb2.png";
+import kobweb4 from "../assets/kobweb4.png";
+import kobweb5 from "../assets/kobweb5.png";
+import graphbook1 from "../assets/Graphbook1.png";
+import graphbook2 from "../assets/Graphbook2.png";
+import graphbook3 from "../assets/Graphbook3.png";
 
 export const navLinks = [
   {
@@ -94,7 +94,7 @@ export const projects = [
       "MySQL",
       "Tailwind CSS",
     ],
-    images: [Graphbook1, Graphbook2, Graphbook3],
+    images: [graphbook1, graphbook2, graphbook3],
   },
   {
     name: "Darhi Moonch",
