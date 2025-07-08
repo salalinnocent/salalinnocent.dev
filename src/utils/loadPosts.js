@@ -1,19 +1,23 @@
-import matter from "gray-matter";
-//loadPosts.js
-const loadPosts = async () => {
-  const files = import.meta.glob("../blogs/*.md", {
-    query: "?raw",
-    import: "default",
-  });
-  const posts = [];
+import matter from "front-matter"; // front-matter, not gray-matter
 
-  for (const path in files) {
-    console.log("Loading blogs from the path", path);
-    const raw = await files[path]();
-    const { data, content } = matter(raw);
-    posts.push({ ...data, body: content });
-  }
+const loadPosts = async () => {
+  const files = [
+    "full-stack-app-notes.md",
+    "programming-hints.md",
+    "react-components-lifecycle.md",
+    "tailwind-css-hints.md",
+  ];
+
+  const posts = await Promise.all(
+    files.map(async (file) => {
+      const res = await fetch(`/blogs/${file}`);
+      const text = await res.text();
+      const { attributes, body } = matter(text);
+      return { ...attributes, body };
+    })
+  );
 
   return posts;
 };
+
 export default loadPosts;

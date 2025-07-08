@@ -29,7 +29,7 @@ const Blogs = () => {
     return (
         <section id="blogs" className="max-container bg-black mt-[100px] text-white">
             <div className="flex flex-col items-center justify-center gap-5">
-                <h1 className="font-tertiary text-5xl border-b-4 border-red-700 pb-2">Blogs</h1>
+                <h1 className="font-tertiary text-xl sm:text-2xl md:text-3xl lg:text-4xl  border-b-4 border-red-700 pb-2">Blogs</h1>
                 <ul className="w-full max-w-2xl divide-y divide-red-900">
                     {blogs.map((blog) => (
                         <li
