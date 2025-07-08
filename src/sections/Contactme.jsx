@@ -66,9 +66,9 @@ const Contactme = () => {
 
                         {/* GitHub Icon */}
                         <div className="flex flex-col items-center justify-center p-3">
-                            <a href="https://github.com/salalinnocent" target="_blank">
+                            <a href="https://github.com/salalinnocent" target="_blank" alt="Github profile link">
                                 <div className="flex h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 items-center justify-center bg-gradient-to-br from-[var(--color-express)] to-gray-600 border-2 border-red-700 overflow-hidden rounded-full">
-                                    <img src={githubLogo} className="h-full w-full object-cover" />
+                                    <img alt="github logo" src={githubLogo} className="h-full w-full object-cover" />
                                 </div>
                             </a>
                             <p className="text-gray-400 pt-2 text-xs sm:text-sm">Salal Innocent ©2025</p>

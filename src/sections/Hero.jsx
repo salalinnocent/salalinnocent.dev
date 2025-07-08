@@ -43,7 +43,7 @@ const Hero = () => {
                 className={`flex flex-wrap justify-center items-center gap-3 sm:text-3xl md:text-4xl lg:text-5xl font-secondary font-custombold bg-clip-text text-transparent ${techStack[index].gradient}`}
               >
                 <div className={`w-10 h-10 sm:w-12 sm:h-12 ${techStack[index].gradient} rounded-full`}>
-                  <img src={techStack[index].icon} className="w-full h-full object-contain" />
+                  <img alt="techStack icon" src={techStack[index].icon} className="w-full h-full object-contain" />
                 </div>
                 {techStack[index].name}
               </motion.div>

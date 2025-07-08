@@ -5,21 +5,22 @@ import chakraIcon from "../assets/chakraui.svg";
 import expressIcon from "../assets/express.svg";
 import mongodbIcon from "../assets/mongodb.svg";
 import firebaseIcon from "../assets/firebase.svg";
-import darhi2 from "../assets/darhi2.png";
-import nike1 from "../assets/nike1.png";
-import nike2 from "../assets/nike2.png";
-import nike3 from "../assets/nike3.png";
-import nike4 from "../assets/nike4.png";
-import insta1 from "../assets/insta1.png";
-import insta2 from "../assets/insta2.png";
-import insta3 from "../assets/insta3.png";
-import kobweb1 from "../assets/kobweb1.png";
-import kobweb2 from "../assets/kobweb2.png";
-import kobweb4 from "../assets/kobweb4.png";
-import kobweb5 from "../assets/kobweb5.png";
-import graphbook1 from "../assets/graphbook1.png";
-import graphbook2 from "../assets/graphbook2.png";
-import graphbook3 from "../assets/graphbook3.png";
+
+import darhi from "../assets-webp/darhi.webp";
+import nike1 from "../assets-webp/nike1.webp";
+import nike2 from "../assets-webp/nike2.webp";
+import nike3 from "../assets-webp/nike3.webp";
+import nike4 from "../assets-webp/nike4.webp";
+import insta1 from "../assets-webp/insta1.webp";
+import insta2 from "../assets-webp/insta2.webp";
+import insta3 from "../assets-webp/insta3.webp";
+import kobweb1 from "../assets-webp/kobweb1.webp";
+import kobweb2 from "../assets-webp/kobweb2.webp";
+import kobweb4 from "../assets-webp/kobweb4.webp";
+import kobweb5 from "../assets-webp/kobweb5.webp";
+import graphbook1 from "../assets-webp/graphbook1.webp";
+import graphbook2 from "../assets-webp/graphbook2.webp";
+import graphbook3 from "../assets-webp/graphbook3.webp";
 
 export const navLinks = [
   {
@@ -99,7 +100,7 @@ export const projects = [
   {
     name: "Darhi Moonch",
     techStack: ["React.js", "Tailwind CSS"],
-    images: [darhi2],
+    images: [darhi],
   },
   {
     name: "Nike Landing Page",

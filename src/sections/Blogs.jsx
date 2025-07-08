@@ -38,7 +38,7 @@ const Blogs = () => {
                             onClick={() => setActiveBlog(blog)}
                         >
                             <div className="flex flex-row gap-3">
-                                <img src={blog.icon} className="h-15 w-15 bg-gray-600 rounded-lg" />
+                                <img alt="blog icons" src={blog.icon} className="h-15 w-15 bg-gray-600 rounded-lg" />
                                 <div className="flex flex-col mt-1">
                                     <h2 className="text-xl font-semibold font-blog">{blog.title}</h2>
                                     <p className="text-sm text-gray-400">{blog.date}</p>

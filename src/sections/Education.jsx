@@ -1,14 +1,9 @@
-import uppsala from "../assets/uppsala.png";
-import forman from "../assets/forman.png"
-import { useEffect } from "react";
+import uppsala from "../assets-webp/uppsala.webp";
+import forman from "../assets-webp/forman.webp"
+
+
 //Education Section
 const Education = () => {
-    // const [screenSize, setScreenSize] = useState(null)
-    // useEffect(() => {
-    //     setScreenSize(() => {
-    //         if(screenSize > window.00)
-    //     })
-    // })
     return (
         <section id="education" className="max-container bg-black mt-[120px]">
             <div className="flex flex-col justify-center items-center h-full w-full space-y-10">
@@ -18,7 +13,7 @@ const Education = () => {
                     {/* Bachelor's */}
                     <div className="flex flex-row gap-3 sm:px-2">
                         <div className="pt-1">
-                            <img src={forman} alt="Forman Christian College, Lahore" className="hidden sm:block h-19 w-20 bg-white rounded-2xl object-contain" />
+                            <img src={forman} alt="Forman Christian College Logo" className="hidden sm:block h-19 w-20 bg-white rounded-2xl object-contain" />
                         </div>
                         <div className="flex flex-col">
                             <h1 className="text-white text-md md:text-md sm:text-2xl">Bachelor's <span className="text-sm text-gray-400">2013 - 2019</span></h1>
@@ -30,7 +25,7 @@ const Education = () => {
                     {/* Master's */}
                     <div className="flex flex-row gap-3 sm:px-2">
                         <div className="pt-1">
-                            <img src={uppsala} alt="Uppsala University, Sweden" className="hidden sm:block bg-white h-19 w-20 rounded-2xl object-contain" />
+                            <img src={uppsala} alt="Uppsala University, Sweden logo" className="hidden sm:block bg-white h-19 w-20 rounded-2xl object-contain" />
                         </div>
                         <div className="flex flex-col">
                             <h1 className="text-white text-md sm:text-2xl">Master's <span className="text-gray-400 text-sm">2020 - 2024</span></h1>
