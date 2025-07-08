@@ -28,35 +28,40 @@ const Projects = () => {
     <>
       <section id="projects" className="max-container bg-black py-10 px-5 mt-[120px]">
         <div className="flex flex-col justify-center items-center h-full w-full gap-5">
-          <h1 className="text-2xl sm:text-xl md:text-5xl lg:text-5xl border-b-4 border-red-700 font-tertiary text-white">Projects</h1>
+          <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl border-b-4 border-red-700 font-tertiary text-white text-center">
+            Projects
+          </h1>
 
-          {/*Left Side for the Project Name */}
           {projects.map((project, i) => (
-            <div key={i} className="flex flex-col md:flex-row items-start justify-start md:items-center w-full">
-              {/* Left: Static Text Content */}
-              <Card className="mx-auto mt-2 border-transparent">
-                <CardContent className="text-white text-2xl sm:text-xl md:text-3xl lg:text-3xl border-b-2 border-red-700 h-20 w-full flex justify-center overflow-hidden relative">{project.name}</CardContent>
-                <CardContent className="text-white font-tertiary text-2xl sm:text-xl md:text-3xl lg:text-2xl h-10 w-full flex justify-center items-start overflow-hidden relative">{project.techStack.join(", ")}</CardContent>
+            <div
+              key={i}
+              className="flex flex-col md:flex-row items-center justify-center w-full gap-4 mt-8"
+            >
+              {/* Left Side - Text */}
+              <Card className="w-full md:w-1/2 border-transparent">
+                <CardContent className="text-white text-base sm:text-lg md:text-2xl lg:text-3xl border-b-2 border-red-700 py-2 text-center">
+                  {project.name}
+                </CardContent>
+                <CardContent className="text-white font-tertiary text-sm sm:text-base md:text-xl lg:text-2xl py-2 text-center">
+                  {project.techStack.join(", ")}
+                </CardContent>
               </Card>
-              {/* <div className="w-full md:w-1/2 space-y-2"> */}
-              {/* <h1 className="text-gray-300 text-3xl text-center border-2 border-red-700">{project.name}</h1> */}
-              {/* <p className="text-gray-300 text-center text-2xl">{project.techStack.join(", ")}</p> */}
-              {/* </div> */}
 
-              {/* Right: Dynamic Image Content */}
+              {/* Right Side - Image */}
               <div className="w-full md:w-1/2">
                 <Card className="shadow-lg rounded-2xl overflow-hidden w-full">
                   <CardContent className="p-0">
                     <img
                       src={project.images[imageIndices[i]]}
                       alt={project.name}
-                      className={`object-contain w-full h-[500px] transition-opacity duration-500 ease-in-out`}
+                      className="object-contain w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] transition-opacity duration-500 ease-in-out"
                     />
                   </CardContent>
                 </Card>
               </div>
-            // </div>
+            </div>
           ))}
+
         </div>
 
       </section >

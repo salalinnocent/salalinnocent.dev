@@ -37,11 +37,20 @@ const Blogs = () => {
                             className="cursor-pointer py-4 hover:bg-gray-800 transition-all px-4 rounded"
                             onClick={() => setActiveBlog(blog)}
                         >
-                            <div className="flex flex-row gap-3">
-                                <img alt="blog icons" src={blog.icon} className="h-15 w-15 bg-gray-600 rounded-lg" />
-                                <div className="flex flex-col mt-1">
-                                    <h2 className="text-xl font-semibold font-blog">{blog.title}</h2>
-                                    <p className="text-sm text-gray-400">{blog.date}</p>
+                            <div className="flex items-center gap-3 w-full">
+                                {/* Icon */}
+                                <img
+                                    alt="blog icons"
+                                    src={blog.icon}
+                                    className="h-12 w-12 sm:h-14 sm:w-14 bg-gray-600 rounded-lg object-cover"
+                                />
+
+                                {/* Text */}
+                                <div className="flex flex-col">
+                                    <h2 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold font-blog text-white leading-tight">
+                                        {blog.title}
+                                    </h2>
+                                    <p className="text-xs sm:text-sm md:text-base text-gray-400">{blog.date}</p>
                                 </div>
                             </div>
                         </li>

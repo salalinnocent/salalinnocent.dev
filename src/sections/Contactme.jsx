@@ -30,7 +30,7 @@ const Contactme = () => {
     };
 
     return (
-        <section id="contact-me" className="max-container bg-black mt-20 px-4">
+        <section id="contact-me"   className="max-container bg-black mt-[40px] sm:mt-[80px] md:mt-[100px] lg:mt-[120px]">
             <div className="flex flex-col justify-center items-center">
                 <h1 className="text-white font-tertiary text-xl sm:text-2xl md:text-3xl lg:text-4xl border-b-4 border-red-700 mb-4">
                     Contact Me

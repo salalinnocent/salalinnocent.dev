@@ -1,11 +1,11 @@
-import matter from "front-matter"; // front-matter, not gray-matter
+import matter from "front-matter"; 
 
 const loadPosts = async () => {
   const files = [
     "full-stack-app-notes.md",
+    "tailwind-css-hints.md",
     "programming-hints.md",
     "react-components-lifecycle.md",
-    "tailwind-css-hints.md",
   ];
 
   const posts = await Promise.all(
