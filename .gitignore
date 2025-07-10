@@ -13,8 +13,8 @@ dist-ssr
 *.local
 
 #enviromental varaible
-**/.env
-
+.env
+node_modules/
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
