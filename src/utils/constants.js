@@ -45,42 +45,57 @@ export const navLinks = [
   },
 ];
 
+
 //exporting the techStack
 export const techStack = [
   {
     name: "React.js",
     icon: reactIcon,
-    gradient: "blue",
+    gradient: "bg-gradient-to-r from-cyan-500 to-cyan-700",
+    solidText: "text-cyan-700",
+    solidBg: "bg-cyan-700",
   },
   {
     name: "Node.js",
     icon: nodeIcon,
-    gradient: "green",
+    gradient: "bg-gradient-to-r from-green-600 to-green-400",
+    solidText: "text-green-600",
+    solidBg: "bg-green-600",
   },
   {
     name: "Tailwind CSS",
     icon: tailwindIcon,
-    gradient: "blue",
+    gradient: "bg-gradient-to-r from-sky-400 to-sky-700",
+    solidText: "text-sky-700",
+    solidBg: "bg-sky-700",
   },
   {
     name: "Chakra UI",
     icon: chakraIcon,
-    gradient: "blue",
+    gradient: "bg-gradient-to-r from-teal-500 to-teal-300",
+    solidText: "text-teal-500",
+    solidBg: "bg-teal-500",
   },
   {
     name: "Express.js",
     icon: expressIcon,
-    gradient: "gray",
+    gradient: "bg-gradient-to-r from-gray-600 to-gray-300",
+    solidText: "text-gray-400",
+    solidBg: "bg-gray-400",
   },
   {
     name: "MongoDB",
     icon: mongodbIcon,
-    gradient: "green",
+    gradient: "bg-gradient-to-l from-emerald-600 to-green-400",
+    solidText: "text-emerald-600",
+    solidBg: "bg-emerald-600",
   },
   {
     name: "Firebase",
     icon: firebaseIcon,
-    gradient:"red",
+    gradient: "bg-gradient-to-b from-yellow-400 to-yellow-600",
+    solidText: "text-yellow-600",
+    solidBg: "bg-yellow-600",
   },
 ];
 export default techStack;
