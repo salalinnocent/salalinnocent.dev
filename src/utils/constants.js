@@ -80,7 +80,7 @@ export const techStack = [
   {
     name: "Firebase",
     icon: firebaseIcon,
-    gradient: "bg-gradient-to-l from-[var(--color-firebase)] to yellow-400",
+    gradient: "bg-gradient-to-b from-[var(--color-firebase)] to yellow-600",
   },
 ];
 export default techStack;

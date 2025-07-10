@@ -22,14 +22,14 @@ const Hero = () => {
   return (
     <section id="hero" className="relative w-full min-h-[100dvh] overflow-hidden">
       <canvas className="fixed top-0 left-0 w-full h-full z-[-1]" />
-
+      {/*Main Text*/}
       <div className="relative z-10 flex flex-col w-full min-h-[100dvh] justify-center items-center px-4 py-8 sm:py-12">
         <h1 className="text-gray-300 font-tertiary font-semibold text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-center leading-tight">
           Hej<span className="text-red-700">, </span>I
           <span className="text-red-700">'</span>m a Web Developer
           <span className="text-red-700">.</span>
         </h1>
-
+        {/* Card Animated Content*/}
         <Card className="w-full max-w-xs sm:max-w-md md:max-w-lg mx-auto mt-6 border-transparent">
           <CardContent className="w-full px-4 sm:px-8 py-4 flex justify-center items-center relative">
             <AnimatePresence mode="wait">
@@ -58,7 +58,7 @@ const Hero = () => {
             </AnimatePresence>
           </CardContent>
         </Card>
-
+        {/*Arrow and TechStack Text*/}
         <ArrowUp size={24} className="text-red-700 mt-6" />
         <h2 className="text-gray-500 font-tertiary font-semibold text-sm sm:text-xl mt-2">
           Tech Stack
