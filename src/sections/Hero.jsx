@@ -48,9 +48,7 @@ const Hero = () => {
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <span
-                  className={`bg-clip-text text-transparent ${techStack[index].gradient}`}
-                  style={{ WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}
+                <span className="text-white"
                 >
                   {techStack[index].name}
                 </span>

@@ -50,37 +50,37 @@ export const techStack = [
   {
     name: "React.js",
     icon: reactIcon,
-    gradient: "bg-gradient-to-r from-cyan-500 to-cyan-700",
+    gradient: "blue",
   },
   {
     name: "Node.js",
     icon: nodeIcon,
-    gradient: "bg-gradient-to-r from-green-600 to-green-400",
+    gradient: "green",
   },
   {
     name: "Tailwind CSS",
     icon: tailwindIcon,
-    gradient: "bg-gradient-to-r from-sky-400 to-sky-700",
+    gradient: "blue",
   },
   {
     name: "Chakra UI",
     icon: chakraIcon,
-    gradient: "bg-gradient-to-r from-teal-500 to-teal-300",
+    gradient: "blue",
   },
   {
     name: "Express.js",
     icon: expressIcon,
-    gradient: "bg-gradient-to-r from-gray-600 to-gray-500",
+    gradient: "gray",
   },
   {
     name: "MongoDB",
     icon: mongodbIcon,
-    gradient: "bg-gradient-to-l from-emerald-600 to-green-400",
+    gradient: "green",
   },
   {
     name: "Firebase",
     icon: firebaseIcon,
-    gradient: "bg-gradient-to-b from-yellow-400 to-yellow-600",
+    gradient:"red",
   },
 ];
 export default techStack;
