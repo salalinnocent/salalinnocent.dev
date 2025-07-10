@@ -7,6 +7,11 @@ import { NodeGlobalsPolyfillPlugin } from "@esbuild-plugins/node-globals-polyfil
 import { NodeModulesPolyfillPlugin } from "@esbuild-plugins/node-modules-polyfill";
 
 export default defineConfig({
+  server: {
+    proxy: {
+      "/contact-me": "http://localhost:5000",
+    },
+  },
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {

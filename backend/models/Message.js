@@ -1,13 +1,16 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
-//Message Schema for my Contact me
+// Message Schema for Contact Me
 const messageSchema = new mongoose.Schema({
   name: String,
   email: String,
   message: String,
   createdAt: {
     type: Date,
-    default: Date.now(),
+    default: Date.now,
   },
 });
-module.exports = mongoose.model("message", messageSchema);
+
+const Message = mongoose.model("Message", messageSchema);
+export default Message;
+

@@ -18,14 +18,20 @@ const Contactme = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setAlertMessage('Message Sent Successfully');
+
     try {
-      const res = await fetch('http://localhost:5000/contact-me', {
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/contact-me`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
       const data = await res.json();
+      if (res.ok) {
+        setAlertMessage("Message Sent Successfully!!")
+        setFormData({ name: "", email: "", message: "" })
+      } else {
+        setAlertMessage("Opps, Try Again Please!!")
+      }
       <AlertBox message={data.message} onClose={() => setAlertMessage(null)} />;
     } catch (error) {
       console.log('Error:', error);
@@ -84,13 +90,13 @@ const Contactme = () => {
             <div className="flex gap-3">
               {/* LinkedIn */}
               <a href="https://www.linkedin.com/in/salal-innocent/" target="_blank">
-                <div className="h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-800 border-2 border-blue-900 rounded-full overflow-hidden">
-                  <img src={linkedinLogo} alt="LinkedIn" className="h-6 w-6 object-contain" />
+                <div className="h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center bg-white  sm:bg-gradient-to-br sm:from-blue-500 sm:to-blue-700 border-2 border-blue-900 rounded-full overflow-hidden">
+                  <img src={linkedinLogo} alt="LinkedIn" className="h-7 w-7 object-contain" />
                 </div>
               </a>
               {/* GitHub */}
               <a href="https://github.com/salalinnocent" target="_blank" >
-                <div className="h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center bg-white bg-gradient-to-br from-white-700 to-white-900 border-2 border-red-700 rounded-full overflow-hidden">
+                <div className="h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center bg-white sm:bg-gradient-to-br sm:from-gray-200 sm:to-gray-500 border-2 border-red-700 rounded-full overflow-hidden">
                   <img src={githubLogo} alt="GitHub" className="h-6 w-6 object-contain" />
                 </div>
               </a>
@@ -98,7 +104,7 @@ const Contactme = () => {
 
               {/* Discord */}
               <a href="https://discord.com/users/565877564024029195" target="_blank">
-                <div className="h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center bg-gradient-to-br from-indigo-500 to-purple-700 border-2 border-indigo-800 rounded-full overflow-hidden">
+                <div className="h-10 w-10 sm:h-12 sm:w-12 flex items-center justify-center bg-white sm:bg-gradient-to-br sm:from-indigo-500 sm:to-purple-700 border-2 border-indigo-800 rounded-full overflow-hidden">
                   <img src={discordLogo} alt="Discord" className="h-6 w-6 object-contain" />
                 </div>
               </a>

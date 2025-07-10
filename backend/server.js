@@ -1,23 +1,37 @@
-const dotenv = require("dotenv");
-const express = require("express");
-const connectDB = require("../backend/db/connect");
-const contactRoute = require("../backend/routes/contact");
-const cors = require("cors");
+import dotenv from "dotenv";
+import express from "express";
+import connectDB from "../backend/db/connect.js";
+import contactRoute from "../backend/routes/contact.js";
+import path from "path";
+import cors from "cors";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
 
 dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 const app = express();
 app.use(express.json());
 app.use(cors());
 app.use("/contact-me", contactRoute);
-const PORT = 5000;
+
+app.use(express.static(path.join(__dirname, "../dist")));
+
+//need to look up on this get path
+app.get("/{*any}", (req, res) => {
+  res.sendFile(path.join(__dirname, "../dist", "index.html"));
+});
+
 const connect = async () => {
   try {
     await connectDB(process.env.MONGO_URI);
-    app.listen(PORT, () => {
-      console.log("BACKEND APP IS LISTENING ON PORT 5000");
+    app.listen(process.env.PORT, () => {
     });
   } catch (error) {
-    console.log(error, "Error connecting the server");
+    console.log("❌ Error connecting:", error);
   }
 };
 connect();
+

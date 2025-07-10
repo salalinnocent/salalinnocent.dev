@@ -50,41 +50,42 @@ export const techStack = [
   {
     name: "React.js",
     icon: reactIcon,
-    gradient: "bg-gradient-to-r from-[var(--color-react)] to-cyan-700",
+    gradient: "bg-gradient-to-r from-cyan-500 to-cyan-700",
   },
   {
     name: "Node.js",
     icon: nodeIcon,
-    gradient: "bg-gradient-to-r from-[var(--color-node)] to-green-400",
+    gradient: "bg-gradient-to-r from-green-600 to-green-400",
   },
   {
     name: "Tailwind CSS",
     icon: tailwindIcon,
-    gradient: "bg-gradient-to-r from-[var(--color-tailwind)] to-sky-700",
+    gradient: "bg-gradient-to-r from-sky-400 to-sky-700",
   },
   {
     name: "Chakra UI",
     icon: chakraIcon,
-    gradient: "bg-gradient-to-r from-[var(--color-chakra)] to-teal-300",
+    gradient: "bg-gradient-to-r from-teal-500 to-teal-300",
   },
   {
     name: "Express.js",
     icon: expressIcon,
-    gradient: "bg-gradient-to-r from-[var(--color-express)] to-gray-500",
+    gradient: "bg-gradient-to-r from-gray-600 to-gray-500",
   },
   {
     name: "MongoDB",
     icon: mongodbIcon,
-    gradient: "bg-gradient-to-l from-[var(--color-mongo)] to-green-400",
+    gradient: "bg-gradient-to-l from-emerald-600 to-green-400",
   },
   {
     name: "Firebase",
     icon: firebaseIcon,
-    gradient: "bg-gradient-to-b from-[var(--color-firebase)] to yellow-600",
+    gradient: "bg-gradient-to-b from-yellow-400 to-yellow-600",
   },
 ];
 export default techStack;
 
+//projects
 export const projects = [
   {
     name: "Graphbook",

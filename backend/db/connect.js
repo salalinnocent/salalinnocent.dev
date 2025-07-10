@@ -1,8 +1,9 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
+//connectDB
 const connectDB = (url) => {
   return mongoose.connect(url, {
   });
 };
 
-module.exports = connectDB;
+export default connectDB;
