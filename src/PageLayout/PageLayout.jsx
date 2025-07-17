@@ -16,8 +16,8 @@ const PageLayout = ({ children }) => {
         <Blogs />
         <Projects />
         <Contactme />
-        <Analytics/>
       </div>
+      <Analytics />
     </>
   )
 }
