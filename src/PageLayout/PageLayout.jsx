@@ -4,7 +4,7 @@ import Aboutme from "@/sections/Aboutme"
 import Contactme from "@/sections/Contactme"
 import Blogs from "@/sections/Blogs"
 import Education from "@/sections/Education"
-
+import { Analytics } from "@vercel/analytics/next"
 const PageLayout = ({ children }) => {
 
   return (
@@ -16,6 +16,7 @@ const PageLayout = ({ children }) => {
         <Blogs />
         <Projects />
         <Contactme />
+        <Analytics/>
       </div>
     </>
   )
