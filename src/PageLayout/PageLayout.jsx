@@ -4,7 +4,7 @@ import Aboutme from "@/sections/Aboutme"
 import Contactme from "@/sections/Contactme"
 import Blogs from "@/sections/Blogs"
 import Education from "@/sections/Education"
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 const PageLayout = ({ children }) => {
 
   return (
