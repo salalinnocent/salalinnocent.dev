@@ -20,6 +20,7 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
+    exclude: ["@vercel/analytics"],
     esbuildOptions: {
       plugins: [
         NodeGlobalsPolyfillPlugin({
